@@ -1,0 +1,13 @@
+Pre-registered before any result (Nov 12).
+Change: BC_HOLD_GRIP=1 (stall-breaker kicks may not change the gripper command while the gripper is closed). Same weights final.pt.
+Motivation: replay of 6 misses showed hover freeze ~3 cm from slot, then breaker kick opened gripper; plate dropped.
+Dev evidence (not evidence of success): 32 known-miss seeds, in-process probe: shipped 17/32, hold 28/32.
+Screen: fresh seeds 7,800,000 + k*10,000 (k=0..3), 150 each, 600 trials, advaitic-eval, both configs on identical seeds.
+Rule: adopt hold if misses(hold) <= misses(base) and no new falls/policy errors. A 600 screen only rules out regressions;
+it cannot distinguish 0.5% from 0.1%. Certification would need a separate fresh 3,000-trial run (seeds 7,900,000+).
+
+Screen result: base 594/600, hold 598/600 -> rule met; hold made default.
+Certification (pre-registered before result): hold default, final.pt, seeds 7,900,000 + k*10,000, k=0..9, 300 each, 3,000 trials.
+Claim allowed: observed success rate with Wilson 95% interval. "99.9%" only if <= 3 misses. Dev seeds (7,7xx, 7,8xx) excluded.
+
+Certification result: 2991/3000 (99.7%), Wilson 95% 99.4-99.8%. 9 misses (> 3), so the 99.9% claim is NOT made.

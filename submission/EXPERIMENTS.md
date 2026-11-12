@@ -155,7 +155,7 @@ Evaluator-run results from our own runs; fresh seeds were never used for trainin
 | **cr_all + stall breaker** | 7,500,000-7,530,000 (4x150) | 600 | 594 (99.0%) | Wilson 95%: 97.8-99.5%; slots 100,99,99,100,99,97 |
 | cr_v5 + stall breaker v1 (shipped at the time) | same 600 seeds | 600 | 597 (99.5%) | Wilson 95%: 98.5-99.8%; **optimistic: superseded by the 3,000-trial run below (99.0%)** |
 
-Pre-registered rule (`logs/PREREG_final600.txt`): ship cr_v5 if it has no more misses than cr_all on the same fresh seeds
+Pre-registered rule (`reports/prereg/PREREG_final600.txt`): ship cr_v5 if it has no more misses than cr_all on the same fresh seeds
 (3 vs 6). The difference is **not statistically significant** (Fisher p about 0.5).
 
 Diagnosis of the four 7,36x misses (replay of the saved actions with read-only privileged probes,
@@ -175,7 +175,7 @@ Not isolated: whether the gain comes from DART, from hard configs, or from more 
 
 ### F. Larger certification (Nov 12): the 99.9% goal was NOT reached
 
-Pre-registered in `logs/PREREG_round2.txt` before any result. Stall breaker v2 (3 stalled replans, random-strength kicks;
+Pre-registered in `reports/prereg/PREREG_round2.txt` before any result. Stall breaker v2 (3 stalled replans, random-strength kicks;
 on 120 healthy dev episodes it fired in 1 (a slot-6 freeze it rescued; 120/120 succeeded) (run with the in-process `scripts/probe_seeds.py`, not the evaluator; all scores in the tables are `advaitic-eval` runs via `logs/snap_eval.sh`); rescues the post-grasp freeze of 7520101 and 7360087 at normal speed).
 
 | Run | Seeds | Trials | Success | Notes |
@@ -196,3 +196,25 @@ so the stall breaker cannot help and a dropped plate is not recoverable. Adding 
 Follow-up probe (in-process `probe_seeds.py`, six slot-6 hover/drop seeds, not an evaluator result): the shipped stall
 breaker's strong kicks can open the gripper mid-hold and drop the plate (all six fail with it on); breaker off passes 2/6;
 a gentler fixed kick (sigma 0.3, 3 stalled replans) passes 3/6. Any change based on this needs an evaluator run on fresh seeds.
+
+### G. Gripper-hold stall breaker (Nov 12)
+
+Replay of 6 slot-6 / near-slot-6 misses (`diagnose_miss.py`): 5 of 6 held the plate 3-6 cm from the slot, froze for 80-220
+steps, then the gripper opened (0.9 -> 0.5 -> 0) with the plate above the slot and it dropped. Change: `BC_HOLD_GRIP`
+(now default on): while a stall-breaker kick is active and the gripper is closed, keep the previous gripper command.
+Pre-registered in `reports/prereg/PREREG_hold.txt`. Dev (32 known-miss seeds, in-process, biased selection): shipped 17/32, hold 28/32.
+Fresh screen, seeds 7,800,000 + k*10,000 (k=0..3), 4x150, identical seeds, same weights:
+
+| Config | Success | Misses |
+|---|---|---|
+| breaker v2 (shipped) | 594/600 (99.0%) | 7810024, 7820030, 7820079, 7820080, 7830116, 7830121 |
+| + hold gripper | 598/600 (99.7%) | 7810024, 7830121 |
+
+Rule met (misses hold <= base, no new falls/errors). Not statistically significant (Fisher p about 0.28); a 600-trial screen
+only rules out regressions. Certification run: seeds 7,900,000+ (10x300), see `reports/prereg/PREREG_hold.txt`.
+
+Certification result (pre-registered in `reports/prereg/PREREG_hold.txt`, seeds 7,900,000 + k*10,000, 10x300, hold default, weights unchanged):
+**2,991/3,000 (99.7%)**, Wilson 95% 99.4-99.8%, per slot 499/500/500/498/498/496, 8 timeouts + 1 early termination (7930139, no fall),
+0 falls, 0 policy errors, integrity ok. Misses: 7900129, 7930139, 7940032, 7950209, 7950240, 7950286, 7970183, 7970247, 7980162.
+Versus the previous version (2,970/3,000 on 7,7xx seeds): Fisher p about 0.001 (different seeds). 99.9% goal not reached.
+Public block with video (7,310,000+): 30/30. Reports: `reports/final_hold/`.

@@ -1,0 +1,10 @@
+2026-11-11T14:11:04+05:30
+Frozen comparison on fresh seeds 7,500,000+ (4 blocks x 150 trials, execute 20, stall breaker on).
+Models: cr_v5 (DART+hard data, 150k steps) vs cr_all (previous best), SAME seeds, SAME submission code.
+Rule: report observed successes/600 and Wilson 95% lower bound for each; ship cr_v5 only if its miss count
+is <= cr_all's on these seeds; otherwise keep cr_all. No edits to submission/ or retraining after seeing results.
+sha256 cr_v5:  92f0318cad607e9db7e2a087a8890b524713c018564deaf2b91c5b4541e0c67f
+sha256 cr_all: 35e556e8a449782b62f66bb12649a9e3c7048c4f9c5f89b1b5672375176bc7af
+submission code hashes:
+  6613a16e91ff8a6204ba867980d3adbaca2c60829a685638fcb5685cc7bf0a6a  bc_policy.py
+  643a4649bde285c06b10d932a18a1cae74dc5c8395025501e6bbf78d4424b229  model.py

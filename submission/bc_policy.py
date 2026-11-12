@@ -50,6 +50,9 @@ class BCPolicy:
         self.stall_calls = int(os.environ.get("BC_STALL_CALLS", "3"))
         self.stall_eps = float(os.environ.get("BC_STALL_EPS", "0.02"))
         self.kick_sigma = float(os.environ.get("BC_KICK_SIGMA", "1.0"))
+        # BC_HOLD_GRIP (default 1): while a kick is active and the gripper is closed, keep the previous gripper
+        # command so a perturbation can move the arm but never open the hand mid-hold.
+        self.hold_grip = os.environ.get("BC_HOLD_GRIP", "1") == "1"
         self.reset()
         if self.relative:  # relative arm-joint actions: add the current pose back at decode time
             from .model import action_limits
@@ -64,6 +67,7 @@ class BCPolicy:
         self.still = 0
         self.kicks = 0
         self.total_kicks = 0
+        self.last_grip = None
         self.rng = np.random.RandomState(0)
 
     def __call__(self, obs):
@@ -72,6 +76,7 @@ class BCPolicy:
             rgb = t.from_numpy(np.asarray(obs["rgb"])).to(self.dev)[None].float() / 255
             raw = t.from_numpy(np.asarray(obs["state"])).to(self.dev)[None]
             sn = (raw - self.mean) / self.std
+            kicked = False
             if self.stall_calls:
                 cur = sn.cpu().numpy()
                 joints = np.r_[0:16, 44:46]  # arm + gripper joints; base velocities always jitter
@@ -84,6 +89,7 @@ class BCPolicy:
                 if self.still >= self.stall_calls:
                     self.kicks += 1
                     self.total_kicks += 1
+                    kicked = True
                     # re-draw the strength each kick (0.3x-3x): a fixed or ramped sigma often stays inside
                     # the same fixed point; a random one escapes it within 1-2 kicks
                     sigma = self.kick_sigma * float(self.rng.uniform(0.3, 3.0))
@@ -103,6 +109,11 @@ class BCPolicy:
 
                 chunk = chunk * self.rel_range + arm_ref(raw, self.lo, self.hi)[:, None, :]
             chunk = chunk[0, : self.execute].clamp(-1, 1)
+            if self.hold_grip:
+                closed = bool((sn[0, 44:46] * self.std[44:46] + self.mean[44:46]).max() > 0.5)
+                if kicked and closed and self.last_grip is not None:
+                    chunk[:, 18:20] = self.last_grip
+                self.last_grip = chunk[-1, 18:20].clone()
         return chunk.cpu().numpy().astype(np.float32)
 
 

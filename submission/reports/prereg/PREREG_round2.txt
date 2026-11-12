@@ -1,0 +1,16 @@
+2026-11-12T01:35:31+05:30
+STAGE 1 (screen): cr_v6 vs cr_v5, same 600 fresh seeds 7,600,000-7,630,000 (4x150), execute 20, stall breaker v2
+ (3 stalled replans, random-strength kicks). Rule: the model with fewer misses advances; ties -> cr_v6 (more
+ diverse data, more recovery coverage). No code/data/weights edits afterwards.
+STAGE 2 (certify): winner only, 3,000 fresh seeds 7,700,000-7,729,999 (10x300). Report observed rate, per-slot,
+ Wilson 95% interval, and every miss. The 99.9% goal counts as achieved only if <=1 miss in 3,000 (observed >=99.97%
+ would need 0 misses; 99.9% observed = <=3 misses). Report the Wilson lower bound alongside, do not overstate.
+ If not achieved, the submission docs keep the 99.5% (600-trial) claim and nothing else.
+sha256 cr_v6: 589251e9ecb8d047307648851fe20e05d66bcf44c081ac415f7000513ba0c4a5
+sha256 cr_v5: 92f0318cad607e9db7e2a087a8890b524713c018564deaf2b91c5b4541e0c67f
+  328de9e811fb6c34e74f5d46835012aedc465bfbfcf1a9ff8f4374d23ef0bfb4  bc_policy.py
+  643a4649bde285c06b10d932a18a1cae74dc5c8395025501e6bbf78d4424b229  model.py
+
+2026-11-12T01:54:22+05:30 STAGE 1 RESULT: cr_v6 592/600 (8 misses, 3 'terminated'), cr_v5 598/600 (2 misses). Rule -> cr_v5 advances.
+STAGE 2 launched now with cr_v5 (sha256 above), unchanged code. Seeds 7,700,000-7,729,999.
+2026-11-12T01:54:49+05:30 STAGE 2 relaunch: first launch had overlapping seed ranges (162 duplicates); killed and deleted before any result. Block starts now 7,700,000 + k*10,000.

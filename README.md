@@ -1,5 +1,13 @@
 # Advaitic · Robot Learning Assignment
 
+> ## Candidate submission: G1 plate transfer, 2,991 / 3,000 (99.7%) on fresh seeds
+>
+> ![Same seed, same weights: without the gripper hold the plate is dropped; with it the task completes](submission/media/hero.gif)
+>
+> Image + proprioception behaviour cloning distilled from a privileged scripted expert, evaluated with the unmodified
+> `advaitic-eval`. **Full results, caveats, videos and exact reproduction steps: [`submission/README.md`](submission/README.md).**
+> (The assignment text below is unchanged.)
+
 Transfer one plate between two racks using a Unitree G1 in MuJoCo. Build a repeatable, observation-driven system, evaluate it honestly, and explain how you improved it.
 
 ## Task
