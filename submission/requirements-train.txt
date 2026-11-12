@@ -1,0 +1,3 @@
+# Training / inference env for the BC policy (CUDA 12.x, RTX 4090). NumPy comes with torch.
+torch>=2.3
+torchvision>=0.18

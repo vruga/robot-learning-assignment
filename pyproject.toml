@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "advaitic-plate-transfer"
+version = "0.1.0"
+description = "Advaitic robot learning assignment: repeatable G1 plate transfer in BiGym2"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "Apache-2.0"
+dependencies = [
+  "bigym @ git+https://github.com/swirl-uk/BiGym2.git@d71501359b215b9d78e27dcb70b220412d474dfa",
+  "mujoco==3.8.1",
+  "numpy>=1.26,<3",
+]
+
+[project.scripts]
+advaitic-eval = "advaitic_eval.runner:main"
+advaitic-check = "advaitic_eval.integrity:main"
+advaitic-smoke = "advaitic_eval.smoke:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.12"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/advaitic_eval"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project.optional-dependencies]
+video = ["imageio-ffmpeg>=0.5"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: uses real MuJoCo, rendering and the frozen WBC"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B"]

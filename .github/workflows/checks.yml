@@ -1,0 +1,17 @@
+name: checks
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      ORT_DISABLE_TELEMETRY: "1"
+      MUJOCO_GL: egl
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: sudo apt-get update && sudo apt-get install -y libegl1 libgl1
+      - run: uv sync --locked
+      - run: uv run ruff check src submission tests
+      - run: uv run ruff format --check src submission tests
+      - run: uv run advaitic-check
+      - run: uv run pytest -q

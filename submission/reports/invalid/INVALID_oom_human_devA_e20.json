@@ -1,0 +1,1128 @@
+{
+  "protocol": "advaitic-plate-v1",
+  "planned_episodes": 60,
+  "completed_episodes": 60,
+  "successes": 0,
+  "success_rate": 0.0,
+  "required_successes": 54,
+  "integrity_ok": true,
+  "balanced_slot_coverage": true,
+  "qualifying_run": true,
+  "meets_success_criterion": false,
+  "status": "FAIL",
+  "per_source_slot": {
+    "1": {
+      "episodes": 10,
+      "successes": 0
+    },
+    "2": {
+      "episodes": 10,
+      "successes": 0
+    },
+    "3": {
+      "episodes": 10,
+      "successes": 0
+    },
+    "4": {
+      "episodes": 10,
+      "successes": 0
+    },
+    "5": {
+      "episodes": 10,
+      "successes": 0
+    },
+    "6": {
+      "episodes": 10,
+      "successes": 0
+    }
+  },
+  "task": "move_plate",
+  "comparison": "Advaitic balanced-slot protocol; not BiGym leaderboard",
+  "method": "human_devA_e20",
+  "policy": "submission.bc_policy:make_policy",
+  "checkpoint": "checkpoints/bc_human/last.pt",
+  "seed_start": 7320000,
+  "plan_sha256": "dfaec12014c9724317c2ade70b097deb9546a16e4cbb16b4d557f79f00dc872e",
+  "plan": [
+    {
+      "seed": 7320000,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320001,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320002,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320003,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320004,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320005,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320006,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320007,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320008,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320009,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320010,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320011,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320012,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320013,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320014,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320015,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320016,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320017,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320018,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320019,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320020,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320021,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320022,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320023,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320024,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320025,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320026,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320027,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320028,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320029,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320030,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320031,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320032,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320033,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320034,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320035,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320036,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320037,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320038,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320039,
+      "source_slot": 3
+    },
+    {
+      "seed": 7320040,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320041,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320042,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320043,
+      "source_slot": 4
+    },
+    {
+      "seed": 7320044,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320045,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320048,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320049,
+      "source_slot": 1
+    },
+    {
+      "seed": 7320050,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320053,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320054,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320055,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320056,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320059,
+      "source_slot": 5
+    },
+    {
+      "seed": 7320061,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320062,
+      "source_slot": 0
+    },
+    {
+      "seed": 7320076,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320080,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320086,
+      "source_slot": 2
+    },
+    {
+      "seed": 7320098,
+      "source_slot": 2
+    }
+  ],
+  "episodes": [
+    {
+      "episode": 0,
+      "seed": 7320000,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy exited before responding"
+    },
+    {
+      "episode": 1,
+      "seed": 7320001,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 2,
+      "seed": 7320002,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 3,
+      "seed": 7320003,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 4,
+      "seed": 7320004,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 5,
+      "seed": 7320005,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 6,
+      "seed": 7320006,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 7,
+      "seed": 7320007,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 8,
+      "seed": 7320008,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 9,
+      "seed": 7320009,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 10,
+      "seed": 7320010,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 11,
+      "seed": 7320011,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 12,
+      "seed": 7320012,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 13,
+      "seed": 7320013,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 14,
+      "seed": 7320014,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 15,
+      "seed": 7320015,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 16,
+      "seed": 7320016,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 17,
+      "seed": 7320017,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 18,
+      "seed": 7320018,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 19,
+      "seed": 7320019,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 20,
+      "seed": 7320020,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 21,
+      "seed": 7320021,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 22,
+      "seed": 7320022,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 23,
+      "seed": 7320023,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 24,
+      "seed": 7320024,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 25,
+      "seed": 7320025,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 26,
+      "seed": 7320026,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 27,
+      "seed": 7320027,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 28,
+      "seed": 7320028,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 29,
+      "seed": 7320029,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 30,
+      "seed": 7320030,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 31,
+      "seed": 7320031,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 32,
+      "seed": 7320032,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 33,
+      "seed": 7320033,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 34,
+      "seed": 7320034,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 35,
+      "seed": 7320035,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 36,
+      "seed": 7320036,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 37,
+      "seed": 7320037,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 38,
+      "seed": 7320038,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 39,
+      "seed": 7320039,
+      "source_slot": 3,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 40,
+      "seed": 7320040,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 41,
+      "seed": 7320041,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 42,
+      "seed": 7320042,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 43,
+      "seed": 7320043,
+      "source_slot": 4,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 44,
+      "seed": 7320044,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 45,
+      "seed": 7320045,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 46,
+      "seed": 7320048,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 47,
+      "seed": 7320049,
+      "source_slot": 1,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 48,
+      "seed": 7320050,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 49,
+      "seed": 7320053,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 50,
+      "seed": 7320054,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 51,
+      "seed": 7320055,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 52,
+      "seed": 7320056,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 53,
+      "seed": 7320059,
+      "source_slot": 5,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 54,
+      "seed": 7320061,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 55,
+      "seed": 7320062,
+      "source_slot": 0,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 56,
+      "seed": 7320076,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 57,
+      "seed": 7320080,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 58,
+      "seed": 7320086,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    },
+    {
+      "episode": 59,
+      "seed": 7320098,
+      "source_slot": 2,
+      "success": false,
+      "completed": true,
+      "steps": 0,
+      "simulated_seconds": 0.0,
+      "policy_seconds": 0.0,
+      "fell": false,
+      "termination": "policy_error",
+      "policy_error": "RuntimeError: Policy process is unavailable"
+    }
+  ],
+  "upstream_integrity": {
+    "ok": true,
+    "upstream_commit": "d71501359b215b9d78e27dcb70b220412d474dfa",
+    "verified_files": 555,
+    "failures": [],
+    "manifest_sha256": "4fb10989dfb8f6581f50b3befdf263db19b5129ec64311456fb58ddfb3ee0ccd"
+  },
+  "submission_sha256": "5993faf4ece951ed34dc77d221f9cd39339d32393e7c5ecca60fe42c62a8b3be",
+  "submission_unchanged": true,
+  "infrastructure_error": null,
+  "substrate": {
+    "substrate_version": "bigym2-mj381-v1",
+    "mujoco_version": "3.8.1",
+    "task": "move_plate",
+    "initialization_profile": "upstream",
+    "robot_model": "g1_dex1",
+    "lowerbody_backend": "groot_wbc_g1",
+    "success_hold_seconds": 1.0,
+    "lowerbody_base_action_mode": "lowerbody_cmd",
+    "lowerbody_init_stance": "keyframe",
+    "lowerbody_pitch_cmd": false,
+    "g1_passive_base_tilt": true,
+    "control_step_seconds": 0.02,
+    "lowerbody_checkpoint": null,
+    "lowerbody_weights": {
+      "GR00T-WholeBodyControl-Balance.onnx": "f645da599d4ca3d29ed273c8f4712620bb680d34977469ca3aeabe5bb9631c18",
+      "GR00T-WholeBodyControl-Walk.onnx": "7c82255b6905ffcc4468fa7f8ddcf7b70db168cf1042107ccab887cb6a8e5407"
+    },
+    "reset_warmup_steps": 200,
+    "reach_tolerance": null,
+    "compiled_model_sha256": "07f4ee09a22fc09dbf6e4b4b017c1576e1c5bb2544b536990098960e801ed63d",
+    "bigym_version": "1.0.0",
+    "bigym_git_sha": null,
+    "episode_length": 17000,
+    "demo_down_sample_rate": 10,
+    "action_representation": "absolute",
+    "upper_delta_scale_rad": null,
+    "action_dim": 20,
+    "low_dim_component_slices": {
+      "proprioception": [
+        0,
+        44
+      ],
+      "proprioception_grippers": [
+        44,
+        46
+      ],
+      "proprioception_floating_base": [
+        46,
+        50
+      ]
+    },
+    "solver": 2,
+    "contact_signature": "36156d4845f2db32"
+  },
+  "python": "3.12.13",
+  "numpy": "2.5.4",
+  "smoke": false
+}
